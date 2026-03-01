@@ -2,8 +2,8 @@ name: Control Diario de Reporte IA SSOMA
 
 on:
   schedule:
-    # 7:00 AM Peru = 12:00 UTC (Lunes a Sabado)
-    - cron: '0 12 * * 1-6'
+    # 7:13 AM Peru = 12:13 UTC (Lunes a Sabado)
+    - cron: '13 12 * * 1-6'
 
   # Permite ejecutar manualmente desde GitHub
   workflow_dispatch:
