@@ -1,6 +1,6 @@
 """
 Modulo de autenticacion OAuth2 con Gmail API.
-- Local: reutiliza credenciales del proyecto gmail-comparativos-agent
+- Local: reutiliza credenciales del proyecto hermano (configurado en config_obras.json)
 - GitHub Actions: usa credenciales restauradas en la raiz del repo
 """
 import os
@@ -49,7 +49,7 @@ def _obtener_credenciales():
             if not os.path.exists(creds_file):
                 raise FileNotFoundError(
                     f"Archivo de credenciales no encontrado: {creds_file}\n"
-                    "Asegurate de que el proyecto gmail-comparativos-agent tenga credentials.json"
+                    "Asegurate de que el proyecto de credenciales tenga credentials.json"
                 )
 
             print("[AUTH] Iniciando flujo de autorizacion OAuth2...")
