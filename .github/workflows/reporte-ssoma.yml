@@ -1,6 +1,8 @@
 name: Control Diario de Reporte IA SSOMA
 
 on:
+  push:
+    branches: [master]
   schedule:
     # 7:00 AM Peru = 12:00 UTC (Lunes a Sabado)
     - cron: '0 12 * * 1-6'
