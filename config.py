@@ -42,7 +42,7 @@ NOTIFICACIONES_JSON = os.path.join(REPORT_DIR, "notificaciones_enviadas.json")
 # MODO PRUEBA - Enviar correos SOLO al usuario de prueba
 # Cambiar a False para produccion
 # ============================================================================
-MODO_PRUEBA = True
+MODO_PRUEBA = False
 
 # ============================================================================
 # CARGAR DATOS SENSIBLES desde env var o archivo local
