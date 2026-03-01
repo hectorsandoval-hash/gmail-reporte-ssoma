@@ -4,8 +4,8 @@ Genera un correo con 2 tablas:
   1. Resumen de cumplimiento (obras que enviaron + datos de formato)
   2. Obras que no enviaron (con estado de notificacion)
 
-SIN columnas: HERGOSA, SINDICATO, TOTAL Obreros, STAFF
-(ya que los reportes SSOMA son Word/PDF, no Excel con datos numericos)
+SIN columnas de datos numericos de personal
+(los reportes SSOMA son Word/PDF, no Excel con datos de dotacion)
 
 Se envian 2 versiones:
   - Reporte completo (con columna "Ver") para el usuario principal

@@ -158,13 +158,9 @@ def _validar_contenido(texto_inicio, tipo_archivo, fecha_objetivo, filename):
     """Valida que el texto del documento contenga datos de empresa y fecha."""
     texto_lower = texto_inicio.lower()
 
-    # Verificar datos de empresa
-    keywords_empresa = [
-        "hergonsa", "hergon", "grupo hergonsa",
-        "ssoma", "seguridad", "salud ocupacional",
-        "reporte", "informe",
-    ]
-    tiene_datos_empresa = any(kw in texto_lower for kw in keywords_empresa)
+    # Verificar datos de empresa (keywords desde config)
+    from config import KEYWORDS_EMPRESA
+    tiene_datos_empresa = any(kw in texto_lower for kw in KEYWORDS_EMPRESA)
 
     # Verificar fecha en el documento
     fecha_objetivo_str = fecha_objetivo.strftime("%d/%m/%Y")

@@ -77,6 +77,11 @@ OBRAS = _config["obras"]
 # Nombre de la empresa (para firmas de correo y reportes)
 COMPANY_NAME = _config.get("company_name", "")
 
+# Keywords para validar contenido del documento (datos de empresa al inicio)
+KEYWORDS_EMPRESA = _config.get("keywords_empresa", [
+    "ssoma", "seguridad", "salud ocupacional", "reporte", "informe",
+])
+
 # ============================================================================
 # ABREVIATURAS DE MESES EN ESPANOL (para carpetas de Google Drive)
 # ============================================================================
