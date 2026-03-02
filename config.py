@@ -11,14 +11,6 @@ import json
 # Ruta base del proyecto
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# Ruta al proyecto con credenciales OAuth2 compartidas (configurable)
-_CREDENTIALS_SIBLING = _config.get("credentials_sibling_dir", "gmail-credentials")
-CREDENTIALS_DIR = os.path.join(os.path.dirname(BASE_DIR), _CREDENTIALS_SIBLING)
-
-# Archivos de credenciales OAuth2
-CREDENTIALS_FILE = os.path.join(CREDENTIALS_DIR, "credentials.json")
-TOKEN_FILE = os.path.join(CREDENTIALS_DIR, "token.json")
-
 # Scopes necesarios para Gmail API y Google Drive API
 SCOPES = [
     "https://www.googleapis.com/auth/gmail.readonly",
@@ -70,6 +62,14 @@ def _cargar_config_obras():
 
 
 _config = _cargar_config_obras()
+
+# Ruta al proyecto con credenciales OAuth2 compartidas (configurable)
+_CREDENTIALS_SIBLING = _config.get("credentials_sibling_dir", "gmail-credentials")
+CREDENTIALS_DIR = os.path.join(os.path.dirname(BASE_DIR), _CREDENTIALS_SIBLING)
+
+# Archivos de credenciales OAuth2
+CREDENTIALS_FILE = os.path.join(CREDENTIALS_DIR, "credentials.json")
+TOKEN_FILE = os.path.join(CREDENTIALS_DIR, "token.json")
 
 TEST_EMAIL = _config["test_email"]
 REPORTE_CC_EMAILS = _config["reporte_cc_emails"]
